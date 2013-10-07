@@ -3,30 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blobfish</title>
 
-    <!-- App styles -->
-    <link rel="stylesheet" type="text/css" href="">
+    <!-- jQuery Mobile styles -->
+    <link rel="stylesheet" type="text/css" href="style/jquery.mobile-1.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="style/jquery.mobile.structure-1.3.2.min.css">
+    <link rel="stylesheet" type="text/css" href="style/jquery.mobile.theme-1.3.2.min.css">
+
     <!-- Localization -->
     <link rel="resource" type="application/l10n" href="locales/locales.ini">
     <link rel="resource" type="application/l10n" href="shared/locales/date.ini">
     <!-- Shared code -->
     <!-- "defer" corre el js hata que la pagina cargue por completo -->
     <script defer src="shared/js/l10n.js"></script>
+    <!-- jQuery Mobile -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.3.2.min.js"></script>
 
   </head>
 
-  <body role="application">
+  <body>
+
+    <div data-role="page">
+
+  <div data-role="header">
+    <h1>Page Title</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+    <p>Page content goes here.</p>
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed">
+    <h4>Page Footer</h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
     
-    <!--Ejemplo para la traduccion
-     <section>
-      <header>
-        <h1 id="titulo-header" data-l10n-id="titulo">Bienvenido</h1>
-      </header>
-
-      <p data-l10n-id="msg">Esto es un texto de prueba para locales</p>
-
-    </section>
-    -->
+    
   </body>
 </html>
