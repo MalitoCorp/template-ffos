@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <title>Messages</title>
+
+    <!-- App styles -->
+    <link rel="stylesheet" type="text/css" href="style/root.css">
+    <!-- Localization -->
+    <link rel="resource" type="application/l10n" href="locales/locales.ini">
+    <link rel="resource" type="application/l10n" href="shared/locales/date.ini">
+    <!-- Shared code -->
+    <!-- "defer" corre el js hata que la pagina cargue por completo -->
+    <script defer src="shared/js/l10n.js"></script>
+
+  </head>
+
+  <body role="application">
+     <section>
+      <header>
+        <h1 id="titulo-header" data-l10n-id="titulo">Bienvenido</h1>
+      </header>
+
+      <p data-l10n-id="msg">Esto es un texto de prueba para locales</p>
+
+    </section>
+  </body>
+</html>
