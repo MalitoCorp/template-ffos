@@ -32,8 +32,8 @@
   "icons": {
     "60": "/style/icons/template_60.png",
     "90": "/style/icons/template_90.png",
-    "120": "/style/icons/template_120.png"
-    "128: "/style/icons/template_128.png"
+    "120": "/style/icons/template_120.png",
+    "128": "/style/icons/template_128.png"
   }
 }
 
