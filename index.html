@@ -10,7 +10,8 @@
     <link rel="stylesheet" type="text/css" href="style/jquery.mobile-1.3.2.min.css">
     <link rel="stylesheet" type="text/css" href="style/jquery.mobile.structure-1.3.2.min.css">
     <link rel="stylesheet" type="text/css" href="style/jquery.mobile.theme-1.3.2.min.css">
-
+    <!-- app styles-->
+    <link rel="stylesheet" type="text/css" href="style/emg-servicios.css">
     <!-- Localization -->
     <link rel="resource" type="application/l10n" href="locales/locales.ini">
     <link rel="resource" type="application/l10n" href="shared/locales/date.ini">
@@ -36,6 +37,38 @@
 
       <div data-role="content">
         <p>Page content goes here.</p>
+        <p>
+    <a href="#emg-servicios" data-role="button" data-inline="true">True</a>
+    <a href="#" data-role="button" data-inline="true">False</a>
+</p>
+      </div><!-- /content -->
+
+      <div data-role="footer" data-position="fixed">
+        <h4>Page Footer</h4>
+      </div><!-- /footer -->
+    </div><!-- /page -->
+
+    <!--               emg-servicios           
+    by: Hiram
+    -->
+    <div data-role="page" id="emg-servicios">
+
+      <div data-role="header">
+        <a href="#" data-icon="arrow-l">Atrás</a>
+        <h1>Servicios</h1>
+      </div><!-- /header -->
+
+      <div data-role="content">
+        <h2>Servicios</h2>
+        <div id="serv-container">
+          <div id="servicios">
+            <a href="#" data-role="button">Bomberos</a>
+          <a href="#" data-role="button">Cruz-Roja</a>
+          <a href="#" data-role="button">Policia</a>
+          <a href="#" data-role="button">Otra Situación</a>
+          </div>
+        </div>
+        
       </div><!-- /content -->
 
       <div data-role="footer" data-position="fixed">
@@ -133,6 +166,8 @@
       </div><!-- /footer -->
     </div><!-- /page -->
     
+
+    <script src="js/emg-servicios.js"></script>
     
   </body>
 </html>
