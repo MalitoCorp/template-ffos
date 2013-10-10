@@ -1,103 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blobfish</title>
+<head>
+  <meta charset="utf-8">
+  <title>Building Blocks app</title>
+  <script>
+    // Trun it to false to always install 'normal' package
+    var supportHIDPI = false;
+    var isFFOS = ("mozApps" in navigator && navigator.userAgent.search("Mobile") != -1);
 
-    <!-- jQuery Mobile styles -->
-    <link rel="stylesheet" type="text/css" href="style/jquery.mobile-1.3.2.min.css">
-    <link rel="stylesheet" type="text/css" href="style/jquery.mobile.structure-1.3.2.min.css">
-    <link rel="stylesheet" type="text/css" href="style/jquery.mobile.theme-1.3.2.min.css">
+    if ( isFFOS ) {
+      var manifestUrl = 'http://buildingfirefoxos.github.io/Building-Blocks/package/package.manifest';
+      var req = navigator.mozApps.installPackage(manifestUrl);
+      req.onsuccess = function() {
+        console.log(this.result.origin);
+      };
+      req.onerror = function() {
+        console.log(this.error.name);
+      };
 
-    <link rel="stylesheet" type="text/css" href="style/main.css">
-    <!-- app styles-->
-    <link rel="stylesheet" type="text/css" href="style/emg-servicios.css">
-    <!-- Localization -->
-    <link rel="resource" type="application/l10n" href="locales/locales.ini">
-    <link rel="resource" type="application/l10n" href="shared/locales/date.ini">
-    <!-- Shared code -->
-    <!-- "defer" corre el js hata que la pagina cargue por completo -->
-    <script defer src="js/l10n.js"></script>
-    <!-- jQuery Mobile -->
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.mobile-1.3.2.min.js"></script>
+    } else {
+      window.location.href = "app.html"
+    }
 
-  </head>
-
-  <body>
-
-    <!--              Main Page               
-        Inicio
-    -->
-    
-    <div data-role="page" id="foo">
-
-      <div data-role="header" data-theme="d">
-        <h1>Foo</h1>
-      </div><!-- /header -->
-
-      <div data-role="content">
-        <p>I'm first in the source order so I'm shown as the page.</p>
-        <p>View internal page called <a href="#bar">bar</a></p>
-      </div><!-- /content -->
-
-      <div data-role="footer" data-position="fixed">
-        <h4>Page Footer</h4>
-      </div><!-- /footer -->
-    </div><!-- /page -->
-
-    <!-- Segunda "pantalla" -->
-    <div data-role="page" id="bar">
-
-      <div data-role="header" data-theme="d">
-        <h1>Bar</h1>
-      </div><!-- /header -->
-
-      <div data-role="content">
-        <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-        <p><a href="#foo">Back to foo</a></p>
-      </div><!-- /content -->
-
-      <div data-role="footer" data-position="fixed">
-        <h4>Page Footer</h4>
-      </div><!-- /footer -->
-    </div><!-- /page -->
-
-    <!-- Tercera "pantalla" -->
-    <div data-role="page" id="" data-theme="d">
-
-      <div data-role="header">
-        <h1>Bar</h1>
-      </div><!-- /header -->
-
-      <div data-role="content">
-        <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-        <p><a href="#foo">Back to foo</a></p>
-      </div><!-- /content -->
-
-      <div data-role="footer" data-position="fixed">
-        <h4>Page Footer</h4>
-      </div><!-- /footer -->
-    </div><!-- /page -->
-
-    <!-- Cuarta "pantalla" -->
-    <div data-role="page" id="" data-theme="d">
-
-      <div data-role="header">
-        <h1>Bar</h1>
-      </div><!-- /header -->
-
-      <div data-role="content">
-        <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-        <p><a href="#foo">Back to foo</a></p>
-      </div><!-- /content -->
-
-      <div data-role="footer" data-position="fixed">
-        <h4>Page Footer</h4>
-      </div><!-- /footer -->
-    </div><!-- /page -->
-
-  </body>
+  </script>
+</head>
+<body>
+</body>
 </html>

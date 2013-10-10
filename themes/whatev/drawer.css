@@ -1,0 +1,97 @@
+/* ----------------------------------
+* Drawer
+* ---------------------------------- */
+
+/* Sidebar */
+section[data-type="sidebar"] {
+  background: #004256;
+}
+
+/* Sidebar header */
+section[data-type="sidebar"]:after {
+  background: #003144;
+  width: 0.1rem;
+}
+
+/* Generic set of actions in toolbar */
+section[data-type="sidebar"] > header menu[type="toolbar"] a:last-child,
+section[data-type="sidebar"] > header menu[type="toolbar"] button:last-child {
+  background: none;
+}
+
+/* This should be removed in drawer BB */
+section[data-type="sidebar"] > header a:first-letter,
+section[data-type="sidebar"] > header button:first-letter {
+  text-transform: none;
+}
+
+/* Pressed state */
+section[data-type="sidebar"] > header menu[type="toolbar"] a:active, 
+section[data-type="sidebar"] > header menu[type="toolbar"] button:active {
+  background: rgba(0,0,0,0.3);
+}
+
+/* Icon definitions */
+section[data-type="sidebar"] > header {
+  display: none;
+}
+
+section[data-type="sidebar"] > nav > h2 {
+  background: none;
+  font-size: 1.4rem;
+  height: 4.5rem;
+  line-height: 6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 0.1rem solid rgba(0,0,0,0.1);
+  color: rgba(255,255,255,0.5);
+}
+/*
+section[data-type="sidebar"] [role="toolbar"] {
+  position: absolute;
+}
+
+section[data-type="sidebar"] > nav > ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section[data-type="sidebar"] > nav > ul > li {
+  color: #fff;
+  list-style: none;
+  transition: background 0.2s ease;
+}
+
+*/
+section[data-type="sidebar"] > nav > ul > li:active,
+section[data-type="sidebar"] > nav > ul > li.active {
+  background: rgba(0,0,0,0.3);
+}
+
+section[data-type="sidebar"] > nav > ul > li > a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: normal;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  border-bottom: 0.1rem solid rgba(0,0,0,0.05);
+  text-indent: 3rem;
+  padding-right: 0.8rem;
+  width: 100%;
+  color: rgba(255,255,255,0.8);
+  -moz-box-sizing: border-box;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+section[data-type="sidebar"] > nav > ul > li:last-child > a {
+  border-bottom: none;
+}
+
+section[data-type="sidebar"] > nav > ul > li.active a {
+  color: rgba(255,255,255,1);
+}
