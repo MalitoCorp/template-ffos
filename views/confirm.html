@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no" />
   <title>Formulario</title>
   <!-- Building blocks -->
+  <link rel="stylesheet" href="../style/confirms.css">
   <link rel="stylesheet" href="../style/action_menu.css">
   <link rel="stylesheet" href="../style/buttons.css">
   <link rel="stylesheet" href="../style/confirm.css">
@@ -187,61 +188,24 @@
   </style>
 </head>
 <body>
-    <section id="drawer" role="region">
-      <header class="fixed">
-      <a id="btn-input-areas-back" href="#"><span class="icon icon-back">back</span></a>
-      <h1>Reportar problema</h1>
-    </header>
-    <article class="content scrollable header">
-      <header><h1>¡Bienvenido!</h1><h2>Por favor llene los siguientes campos detalladamente para brindarle un mejor servicio.</h2></header>
-      <form>
-        <p>
-          <input type="text" placeholder="Nombre(s)">
-          <button type="reset">Clear</button>
-        </p>
 
-        <p>
-          <input type="text" placeholder="Apellido paterno">
-          <button type="reset">Clear</button>
-        </p>
+  <form role="dialog" data-type="confirm">
+    <section>
+      <h1>¡Todo listo!</h1>
+      <h2>Su reporte quedó archivado</h2>
+      <h2>Folio: 2374GHT</h2>
+    </section>
+    <menu>
+      <button class="recommend" onclick="return nueVentana('form.html')">OK</button>
+    </menu>
+  </form>
 
-        <p>
-          <input type="text" placeholder="Apellido materno">
-          <button type="reset">Clear</button>
-        </p>
-
-        <p>
-          <textarea placeholder="Descripción de la situación"></textarea>
-        </p>
-
-        <p>
-          <input type="date" placeholder="Fecha de incidente"/>
-        </p>
-
-        <header><h2>He vivido la misma situación más de una ocasión</h2></header>
-        <label class="pack-switch">
-          <input type="checkbox">
-          <span></span>
-        </label>
-        
-        <p>
-          <button class="recommend" onclick="return nuevaVentana('loading.html')">Enviar</button>
-        </p>
-
-        <script type="text/javascript">
-        function nuevaVentana(ventana) {
-          window.open(ventana);
+  <script type="text/javascript">
+        function nueVentana(ventanas) {
+          location.href="form.html"
           return false;
         }
-        </script>
-
-    </article>
-    </section>
-
-  <script type="text/javascript" defer src="../js/status.js"></script>
-  <script type="text/javascript" defer src="../js/seekbars.js"></script>
-  <script type="text/javascript" defer src="../js/app.js"></script>
+    </script>
 
 </body>
 </html>
-
