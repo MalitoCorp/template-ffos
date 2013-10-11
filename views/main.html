@@ -41,14 +41,19 @@
       <!-- logo -->
       <p id="logo"><img src="../images/logo_cndh.png"></p>
       <!-- Botón reporte -->
-      <button class="recommend">Reporte</button>
+      <button class="recommend" onclick="return nueVentana('form.html')">Reporte</button>
       <!-- llamada -->
       <a href="#" id="call">Llamada telefónica</a>
     </article>
   </section>
 
   <script type="text/javascript" defer src="js/app.js"></script>
-
+  <script type="text/javascript">
+        function nueVentana(ventanas) {
+          location.href="form.html"
+          return false;
+        }
+    </script>
   <script>
     /*var mobile = (navigator.userAgent.search("Mobile") != -1);
     if ( mobile ) {
