@@ -41,13 +41,31 @@
       <!-- logo -->
       <p id="logo"><img src="../images/logo_cndh.png"></p>
       <!-- Botón reporte -->
-      <button class="recommend">Reporte</button>
+      <a role="button"  class="recommend" href="form.html">Reporte</a>
       <!-- llamada -->
       <a href="#" id="call">Llamada telefónica</a>
     </article>
   </section>
 
   <script type="text/javascript" defer src="js/app.js"></script>
+
+  <script>
+
+
+
+
+    // llamada telefónica
+    document.querySelector('#call').addEventListener('click', function () {
+
+      // realiza llamada a bomberos 
+      var call_cndh = new MozActivity({
+                                        name: "dial", // revisar si se necesita uno por llamada.
+                                        data: {
+                                          number: "+123123066"  // añadir numero según se establezca
+                                        }
+                                     });
+    }); // end llamada telefónica
+  </script>
 
   <script>
     /*var mobile = (navigator.userAgent.search("Mobile") != -1);
