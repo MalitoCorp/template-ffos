@@ -31,6 +31,11 @@
       text-decoration: none;
       font-size: 1.3em;
     }
+    #icon-call{
+      position: absolute;
+      bottom: 6%;
+      right: 50%;
+    }
     
   </style>
 </head>
@@ -39,11 +44,12 @@
   <section>
     <article id="main">
       <!-- logo -->
-      <p id="logo"><img src="../images/logo_cndh.png"></p>
+      <p id="logo"><img src="../images/logo_cndh.png" width="80%"></p>
       <!-- Botón reporte -->
-      <a role="button"  class="recommend" href="form.html">Reporte</a>
+      <button class="recommend" onclick="return nueVentana('main.html')">Reporte</button>
       <!-- llamada -->
-      <a href="#" id="call">Llamada telefónica</a>
+
+      <div id="icon-call"><a href="#" id="call"><img src="../images/llamar.png" width="35%"><br /><span>Llamar</span></a></div>
     </article>
   </section>
 
